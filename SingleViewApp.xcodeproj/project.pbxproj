@@ -14,6 +14,7 @@
 		DB56E9231EECBF0900204A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB56E9211EECBF0900204A03 /* LaunchScreen.storyboard */; };
 		DB56E92E1EECBF0A00204A03 /* SingleViewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E92D1EECBF0A00204A03 /* SingleViewAppTests.swift */; };
 		DB56E9391EECBF0A00204A03 /* SingleViewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E9381EECBF0A00204A03 /* SingleViewAppUITests.swift */; };
+		DBA48AB41EED2EB3009402A9 /* TodoComposerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA48AB31EED2EB3009402A9 /* TodoComposerViewController.swift */; };
 		DBB46E091EED1AC200AF6E0C /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB46E081EED1AC200AF6E0C /* TodoCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		DB56E9341EECBF0A00204A03 /* SingleViewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB56E9381EECBF0A00204A03 /* SingleViewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppUITests.swift; sourceTree = "<group>"; };
 		DB56E93A1EECBF0A00204A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBA48AB31EED2EB3009402A9 /* TodoComposerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoComposerViewController.swift; sourceTree = "<group>"; };
 		DBB46E081EED1AC200AF6E0C /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 				DB56E9211EECBF0900204A03 /* LaunchScreen.storyboard */,
 				DB56E9241EECBF0A00204A03 /* Info.plist */,
 				DBB46E081EED1AC200AF6E0C /* TodoCell.swift */,
+				DBA48AB31EED2EB3009402A9 /* TodoComposerViewController.swift */,
 			);
 			path = SingleViewApp;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBA48AB41EED2EB3009402A9 /* TodoComposerViewController.swift in Sources */,
 				DB56E91B1EECBF0900204A03 /* TodoListViewController.swift in Sources */,
 				DBB46E091EED1AC200AF6E0C /* TodoCell.swift in Sources */,
 				DB56E9191EECBF0900204A03 /* AppDelegate.swift in Sources */,

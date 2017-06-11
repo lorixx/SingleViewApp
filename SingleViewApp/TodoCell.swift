@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol TodoCellDelegate {
+  func todoCellDidTapDelete(_ todoCell: TodoCell)
+}
+
 class TodoCell : UITableViewCell {
   
   var title: String?
+  
+  var delegate: TodoCellDelegate?
   
   let titleLabel = UILabel(frame: CGRect.zero)
   
@@ -59,6 +65,6 @@ class TodoCell : UITableViewCell {
   }
   
   @objc func buttonAction(sender: Any!) {
-    print("Button is clicked")
+    delegate?.todoCellDidTapDelete(self)
   }
 }

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, TodoComposerViewControllerDelegate, TodoCellDelegate {
   
   var tableView: UITableView?
+  
+  var todoList = [String]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -18,7 +20,10 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     navigationItem.title = "Todo list"
     
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddTodoButton))
+    
     self.navigationController?.navigationBar.prefersLargeTitles = true
+    navigationItem.largeTitleDisplayMode = .always
   }
   
   override func loadView() {
@@ -39,7 +44,7 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 20
+    return todoList.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,15 +52,39 @@ class TodoViewController: UIViewController, UITableViewDataSource, UITableViewDe
       
     if cell == nil {
       cell = TodoCell(style: UITableViewCellStyle.default, reuseIdentifier: "custom-cell")
+      cell?.delegate = self
     }
     
-    cell?.configure(with: String(indexPath.row))
+    cell?.configure(with: todoList[indexPath.row])
     
     return cell!
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 50
+  }
+  
+  @objc func didTapAddTodoButton(sender: Any) {
+    
+    let todoComposerViewController = TodoComposerViewController(nibName: nil, bundle: nil)
+    todoComposerViewController.delegate = self
+    
+    self.navigationController?.pushViewController(todoComposerViewController, animated: true)
+  }
+  
+  func composerViewController(_ composerViewController: TodoComposerViewController, didSave todo: String) {
+    todoList.insert(todo, at: 0)
+    
+    tableView?.insertRows(at: [ IndexPath(row:0, section:0) ], with: .automatic)
+  }
+  
+  func todoCellDidTapDelete(_ todoCell: TodoCell) {
+    guard let indexPath = tableView?.indexPath(for: todoCell) else {
+      return
+    }
+    
+    todoList.remove(at: indexPath.row)
+    tableView?.deleteRows(at: [ indexPath ], with: .automatic)
   }
 }
 
