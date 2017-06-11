@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DB56E9191EECBF0900204A03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E9181EECBF0900204A03 /* AppDelegate.swift */; };
-		DB56E91B1EECBF0900204A03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E91A1EECBF0900204A03 /* ViewController.swift */; };
+		DB56E91B1EECBF0900204A03 /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E91A1EECBF0900204A03 /* TodoListViewController.swift */; };
 		DB56E91E1EECBF0900204A03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB56E91C1EECBF0900204A03 /* Main.storyboard */; };
 		DB56E9201EECBF0900204A03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB56E91F1EECBF0900204A03 /* Assets.xcassets */; };
 		DB56E9231EECBF0900204A03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB56E9211EECBF0900204A03 /* LaunchScreen.storyboard */; };
 		DB56E92E1EECBF0A00204A03 /* SingleViewAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E92D1EECBF0A00204A03 /* SingleViewAppTests.swift */; };
 		DB56E9391EECBF0A00204A03 /* SingleViewAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB56E9381EECBF0A00204A03 /* SingleViewAppUITests.swift */; };
+		DBB46E091EED1AC200AF6E0C /* TodoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB46E081EED1AC200AF6E0C /* TodoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		DB56E9151EECBF0900204A03 /* SingleViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB56E9181EECBF0900204A03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB56E91A1EECBF0900204A03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DB56E91A1EECBF0900204A03 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		DB56E91D1EECBF0900204A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB56E91F1EECBF0900204A03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB56E9221EECBF0900204A03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		DB56E9341EECBF0A00204A03 /* SingleViewAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB56E9381EECBF0A00204A03 /* SingleViewAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppUITests.swift; sourceTree = "<group>"; };
 		DB56E93A1EECBF0A00204A03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBB46E081EED1AC200AF6E0C /* TodoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				DB56E9181EECBF0900204A03 /* AppDelegate.swift */,
-				DB56E91A1EECBF0900204A03 /* ViewController.swift */,
+				DB56E91A1EECBF0900204A03 /* TodoListViewController.swift */,
 				DB56E91C1EECBF0900204A03 /* Main.storyboard */,
 				DB56E91F1EECBF0900204A03 /* Assets.xcassets */,
 				DB56E9211EECBF0900204A03 /* LaunchScreen.storyboard */,
 				DB56E9241EECBF0A00204A03 /* Info.plist */,
+				DBB46E081EED1AC200AF6E0C /* TodoCell.swift */,
 			);
 			path = SingleViewApp;
 			sourceTree = "<group>";
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB56E91B1EECBF0900204A03 /* ViewController.swift in Sources */,
+				DB56E91B1EECBF0900204A03 /* TodoListViewController.swift in Sources */,
+				DBB46E091EED1AC200AF6E0C /* TodoCell.swift in Sources */,
 				DB56E9191EECBF0900204A03 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +528,7 @@
 				DB56E93F1EECBF0A00204A03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB56E9401EECBF0A00204A03 /* Build configuration list for PBXNativeTarget "SingleViewAppTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				DB56E9421EECBF0A00204A03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB56E9431EECBF0A00204A03 /* Build configuration list for PBXNativeTarget "SingleViewAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +546,7 @@
 				DB56E9451EECBF0A00204A03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
